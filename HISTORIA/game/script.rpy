@@ -25,6 +25,7 @@ image dete1 = "Hablandoo.png"
 image tes = "2009.png"
 image bart = "hablando3.png"
 image art = "Taka.png"
+image carl = "parada.png"
 
 # The game starts here.
 # - El juego comienza aquí.
@@ -82,12 +83,12 @@ label start:
             d "se puede retirar SR. burt"       
             d "que pase el siquiente sospechoso el SR. Art" 
 
-    scene bg inte
-    show dete at right
-    show art at left 
-    a "En que lo puedo ayudar detective"      
-    d "Digame todo lo que sabe hacerca de este asesinato "
-    d "que vinculo" 
+            scene bg inte
+            show dete at right
+            show art at left 
+            a "En que lo puedo ayudar detective"      
+            d "Digame todo lo que sabe hacerca de este asesinato "
+            d "que vinculo" 
     python:
            nuevo1 = []
     menu:
@@ -105,6 +106,30 @@ label start:
             a "Eso es todo lo que tengo que decir"
             a "me retiro detective que pase un buen día detective"
             a "Eso es todo lo que tengo que decir"
+
+    scene bg inte
+    show dete at right
+    show carl at left 
+    c "En que lo puedo ayudar detective"      
+    d "Digame todo lo que sabe hacerca de este asesinato "
+    d "que vinculo" 
+    python:
+           nuevo2 = []
+    menu:
+        "No estaba en el pueblo":
+            python:
+                 nuevo.append("no estaba en el pueblo")
+            
+            c "Eso es todo lo que tengo que decir"
+            c "me retiro detective que pase un buen día detective" 
+
+        "no conicia a la victima":
+            python:
+                 nuevo.append("no conocia a la victima")
+            
+            c "Eso es todo lo que tengo que decir"
+            c "me retiro detective que pase un buen día detective"
+            c "Eso es todo lo que tengo que decir"
 
     #python:
           #  lista1 =list(nuevo)
