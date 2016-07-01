@@ -31,7 +31,7 @@ image art = "Taka.png"
 label start:
     scene bg inicio
     show dete at left
-    d "Debemos resorber este misterioso crimen de una joven asesinada comencemos a interrogar a los sospechosos y testigos de inmediato"
+    d "Debemos resolver este misterioso crimen de una joven asesinada comencemos a interrogar a los sospechosos y testigos de inmediato"
     d "de este crimen"
     d "A quien interogaremos?"
     hide dete
@@ -49,7 +49,7 @@ label start:
             t "mis recueros son confusos lo que recuerdo es que  "
             t "Art era amigo de la victima "
             t "Burt era enemigo de la victima "
-            t "carl conosia a la victima "
+            t "carl conocia a la victima "
             hide muerte
             hide dete1
 
@@ -69,19 +69,17 @@ label start:
     menu:
         "No estaba en el pueblo":
             python:
-                 nuevo.append("estaba en el pueblo")
+                 nuevo.append("no estaba en el pueblo")
             
             b "Eso es todo lo que tengo que decir"
-            b "me retiro detective que pase un buen día detective"
-            
-            
-            
+            b "me retiro detective que pase un buen día detective"         
 
-        "No conocia a la victimaS":
+        "No conocia a la victimas":
+            python:
+                 nuevo.append("no conocia a la victima")
             b "Eso es todo lo que tengo que decir"
-            b "me retiro detective que pase un buen día"
-                        
-            d "se puede retirar SR. bart"       
+            b "me retiro detective que pase un buen día"            
+            d "se puede retirar SR. burt"       
             d "que pase el siquiente sospechoso el SR. Art" 
 
     scene bg inte
@@ -93,12 +91,20 @@ label start:
     python:
            nuevo1 = []
     menu:
+        "No estaba en el pueblo":
+            python:
+                 nuevo.append("no estaba en el pueblo")
+            
+            a "Eso es todo lo que tengo que decir"
+            a "me retiro detective que pase un buen día detective" 
+
         "no conicia a la victima":
+            python:
+                 nuevo.append("no conocia a la victima")
             
             a "Eso es todo lo que tengo que decir"
             a "me retiro detective que pase un buen día detective"
-       # "no conicia a la victima":
-          #  b "Eso es todo lo que tengo que decir"
+            a "Eso es todo lo que tengo que decir"
 
     #python:
           #  lista1 =list(nuevo)
