@@ -53,7 +53,7 @@ label start:
             t "mis recueros son confusos lo que recuerdo es que  "
             t "Art era amigo de la victima "
             t "Burt era enemigo de la victima "
-            t "carl conocia a la victima "
+            t "Detective, la verdad que no recuerdo le aconsejaria interrogara a cada unos de los sospechosos para tener sus testimonios "
             with pixellate
 
             hide muerte
@@ -74,9 +74,9 @@ label start:
     python:
            nuevo = []
     menu:
-        "No estaba en el pueblo":
+        "Era amigo de la victima":
             python:
-                 nuevo.append("no estaba en el pueblo")
+                 nuevo.append("Burt, friend \n")
             
             b "Eso es todo lo que tengo que decir"
             b "me retiro detective que pase un buen día detective" 
@@ -89,9 +89,9 @@ label start:
             d "que vinculo tenia con la victima" 
         
 
-        "No conocia a la victimas":
+        "Estaba fuera del pueblo":
             python:
-                 nuevo.append("no conocia a la victima")
+                 nuevo.append("Burt, outside \n")
             b "Eso es todo lo que tengo que decir"
             b "me retiro detective que pase un buen día"            
             d "se puede retirar SR. burt" 
@@ -107,16 +107,16 @@ label start:
     #python:
            #nuevo1 = []
     menu:
-        "No estaba en el pueblo":
+        "Estaba en el pueblo":
             python:
-                 nuevo.append("no estaba en el pueblo")
+                 nuevo.append("Art, intown \n")
             
             a "Eso es todo lo que tengo que decir"
             a "me retiro detective que pase un buen día detective" 
 
-        "no conicia a la victima":
+        "No conicia a la victima":
             python:
-                 nuevo.append("no conocia a la victima")
+                 nuevo.append("Art, stranger \n")
             
             a "Eso es todo lo que tengo que decir"
             a "me retiro detective que pase un buen día detective"
@@ -131,16 +131,16 @@ label start:
     
           
     menu:
-        "No estaba en el pueblo":
+        "Era enemigo de la victima":
             python:
-                 nuevo.append("no estaba en el pueblo")
+                 nuevo.append("Carl, enemig \n")
             
             c "Eso es todo lo que tengo que decir"
             c "me retiro detective que pase un buen día detective" 
 
-        "no conicia a la victima":
+        "Yo soy inocente":
             python:
-                 nuevo.append("no conocia a la victima")
+                 nuevo.append("Carl, inocent \n")
             
             c "Eso es todo lo que tengo que decir"
             c "me retiro detective que pase un buen día detective"
@@ -156,7 +156,6 @@ label start:
     show dete2:
      ypos 0 xpos 80
     d "Es:.......42"
-    d  "________´$$$$`_________ "
 
     python:
             lista1 =list(nuevo)
