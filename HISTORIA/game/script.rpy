@@ -155,7 +155,7 @@ label start:
 
     show dete2:
      ypos 0 xpos 80
-    d "Es:.......42"
+    d "Es:.....42"
 
     python:
             lista1 =list(nuevo)
